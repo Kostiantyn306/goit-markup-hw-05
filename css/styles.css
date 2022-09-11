@@ -91,9 +91,12 @@ address {
   line-height: 1.19;
 
   color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   justify-content: center;
   align-items: center;
+}
+.logo:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .link-navig {
   display: flex;
@@ -103,6 +106,9 @@ address {
 }
 .link {
   text-decoration: none;
+  transition-property: background-color, color, text-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover {
   color: var(--akcent-color);
@@ -152,6 +158,9 @@ address {
   letter-spacing: 0.02em;
   color: var(--basic-text);
   padding: 32px 0;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:hover {
   color: var(--akcent-color);
@@ -165,6 +174,21 @@ address {
 .active {
   color: var(--akcent-color);
 }
+.emphasis {
+  position: relative;
+}
+.emphasis::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--akcent-color);
+  border-radius: 2px;
+}
+
 .active-bnt {
   color: var(--akcent-color);
 }
@@ -316,6 +340,9 @@ address {
   cursor: pointer;
   width: 216px;
   height: 50px;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
   background: var(--background-main);
@@ -336,6 +363,9 @@ address {
   font-family: inherit;
   padding: 6px 22px;
   border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
@@ -456,6 +486,9 @@ address {
   border-radius: 50%;
   fill: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -474,6 +507,9 @@ address {
 .social-link {
   margin-right: auto;
   margin-left: auto;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icons {
@@ -518,12 +554,6 @@ address {
   border-radius: 4px;
 }
 
-/* .client-icon {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  width: 170px;
-  height: 92px;
-} */
 .client-icon:hover,
 .client-icon:focus {
   fill: currentColor;
@@ -531,4 +561,58 @@ address {
 }
 .client-icon {
   fill: currentColor;
+}
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  background-color: rgba(33, 150, 243, 0.9);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-item:hover .overley,
+.portfolio-item:focus .overley {
+  transform: translateY(0%);
+}
+.overley-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  color: var(--white-color);
+}
+
+.meta-thumb {
+  position: relative;
+}
+.thumb-mete {
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  padding: 27px;
+}
+.meta-text {
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white-color);
 }
