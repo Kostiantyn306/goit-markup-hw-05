@@ -63,7 +63,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-list">Ефективне рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити продукт</button>
+          <button class="button" type="button" data-modal-open >Замовити продукт</button>
         </div>
       </section>
       <!-- Наші переваги -->
@@ -537,10 +537,11 @@
       </div>
     </footer>
     <!-- ===Модальне вікно=== -->
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-button" type="button">
-          <svg></svg>
+        <button class="modal-button" type="button" data-modal-close>
+          <svg class="buttom-close" width="11" height="11"><use href="./imeges/icons/symbol-defs.svg#close"></use></svg>
+          </svg>
         </button>
       </div>
     </div>
