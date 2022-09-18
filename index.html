@@ -531,16 +531,14 @@
           </ul>
         </div>
         <!-- ========Вікно підписки========-->
-        <div class="sign-up">
+        <div class="sign-up container">
           <p class="sign-up-text">Підпишіться на розсилку</p>
           <label>
             <input class="sign-ua-input" type="email" name="email" placeholder="E-mail" />
-            <button class="sign-up-button" type="submit">Підписатися
-              <svg class="send" width="24" height="24">
+            </label>
+            <button class="sign-up-button" type="submit">Підписатися <svg class="send" width="24" height="24">
                 <use href="./imeges/icons/symbol-defs.svg#send"></use>
-              </svg>
-            </button>
-          </label>
+              </svg></button>
         </div>
       </div>
     </footer>
@@ -553,34 +551,35 @@
           </svg>
         </button>
         <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="register-form">
+        <div role="form" class="register-form">
           Ім'я
           <label>
-            <input type="text" name="register-form-Username" />
+            <input class="input" type="text" name="register-form-Username" />
           </label>
           Телефон
           <label>
-            <input type="tel" name="register-form-phone-number" />
+            <input class="input" type="tel" name="register-form-phone-number" />
           </label>
           Пошта
           <label>
-            <input type="email" name="register-form-email" />
+            <input class="input" type="email" name="register-form-email" />
           </label>
           <label>
             Коментар
-            <textarea name="comment" rows="10" placeholder="Введіть текст"></textarea>
+            <textarea class="comment" name="comment" rows="10" placeholder="Введіть текст"></textarea>
           </label>
-          <label>
-            <input
+          <label class="checkbox">
+            <input class="checkbox-input"
               type="checkbox"
               name="consent"
               value="consent"
             />
-            Погоджуюся з розсилкою та приймаю
-            <a href=""  <span class="conditions" >Умови договору</span></a>
+
+            <p class="checkbox-text"> Погоджуюся з розсилкою та приймаю
+            <a href=""  <span class="conditions" >Умови договору</span></a></p>
           </label>
           <button class="register-form-button" type="submit">Відправити</button>
-        </form>
+        </div>
       </div>
     </div>
     <!-- ====Скрипти====== -->
